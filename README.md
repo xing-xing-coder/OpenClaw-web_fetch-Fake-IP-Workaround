@@ -9,6 +9,29 @@
 > 适用于 Clash / Mihomo / Surge 等代理工具在 **TUN + fake-ip** 模式下，`web_fetch` 因 SSRF 保护误判 `198.18.0.0/15` 而失败的场景。
 
 ---
+补丁测试状态
+- 日期：2026-4-7
+- OpenClaw 版本：`v2026.4.5`
+- 安装方式：npm 安装
+- 测试结果正常，补丁有效
+
+补丁安装前web_fetch工具结果：
+```json
+{
+  "status": "error",
+  "tool": "web_fetch",
+  "error": "Blocked: resolves to private/internal/special-use IP address"
+}
+```
+补丁安装后web_fetch工具结果
+```json
+{
+  "url": "https://www.google.com",
+  "finalUrl": "https://www.google.com",
+  "status": 200,
+  ...
+}
+```
 
 ## 这是什么
 
