@@ -206,9 +206,7 @@ openclaw status
 bash patch-openclaw-global-fakeip.sh revert
 ```
 
-然后重启 OpenClaw 即可。
-
-如果脚本本身带有备份逻辑，也建议保留备份文件，方便后续排查。
+然后重启 OpenClaw gateway 即可。
 
 ---
 
